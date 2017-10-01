@@ -14,6 +14,8 @@
 		7ABAB5A51F61F46200C656E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABAB5A31F61F46200C656E3 /* LaunchScreen.storyboard */; };
 		7ABAB5B01F61F46300C656E3 /* geofencingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABAB5AF1F61F46300C656E3 /* geofencingTests.swift */; };
 		7ABAB5BB1F61F46300C656E3 /* geofencingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABAB5BA1F61F46300C656E3 /* geofencingUITests.swift */; };
+		7ABAB5CA1F61F53700C656E3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABAB5C91F61F53700C656E3 /* MapKit.framework */; };
+		7ABAB5CC1F62124900C656E3 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7ABAB5CB1F62124900C656E3 /* alarm.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		7ABAB5B61F61F46300C656E3 /* geofencingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = geofencingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ABAB5BA1F61F46300C656E3 /* geofencingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geofencingUITests.swift; sourceTree = "<group>"; };
 		7ABAB5BC1F61F46300C656E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ABAB5C91F61F53700C656E3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7ABAB5CB1F62124900C656E3 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarm.mp3; path = ../../../../Downloads/alarm.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ABAB5CA1F61F53700C656E3 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,7 @@
 				7ABAB5AE1F61F46300C656E3 /* geofencingTests */,
 				7ABAB5B91F61F46300C656E3 /* geofencingUITests */,
 				7ABAB5981F61F46100C656E3 /* Products */,
+				7ABAB5C81F61F53700C656E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +108,7 @@
 				7ABAB59E1F61F46200C656E3 /* Main.storyboard */,
 				7ABAB5A11F61F46200C656E3 /* Assets.xcassets */,
 				7ABAB5A31F61F46200C656E3 /* LaunchScreen.storyboard */,
+				7ABAB5CB1F62124900C656E3 /* alarm.mp3 */,
 				7ABAB5A61F61F46200C656E3 /* Info.plist */,
 			);
 			path = geofencing;
@@ -123,6 +130,14 @@
 				7ABAB5BC1F61F46300C656E3 /* Info.plist */,
 			);
 			path = geofencingUITests;
+			sourceTree = "<group>";
+		};
+		7ABAB5C81F61F53700C656E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7ABAB5C91F61F53700C656E3 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +208,16 @@
 				TargetAttributes = {
 					7ABAB5961F61F46100C656E3 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = MG8EAP853W;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					7ABAB5AA1F61F46300C656E3 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -232,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ABAB5CC1F62124900C656E3 /* alarm.mp3 in Resources */,
 				7ABAB5A51F61F46200C656E3 /* LaunchScreen.storyboard in Resources */,
 				7ABAB5A21F61F46200C656E3 /* Assets.xcassets in Resources */,
 				7ABAB5A01F61F46200C656E3 /* Main.storyboard in Resources */,
@@ -414,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MG8EAP853W;
 				INFOPLIST_FILE = geofencing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swalsh.geofencing;
@@ -426,6 +452,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MG8EAP853W;
 				INFOPLIST_FILE = geofencing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swalsh.geofencing;
@@ -507,6 +534,7 @@
 				7ABAB5C11F61F46300C656E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7ABAB5C21F61F46300C656E3 /* Build configuration list for PBXNativeTarget "geofencingTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +543,7 @@
 				7ABAB5C41F61F46300C656E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7ABAB5C51F61F46300C656E3 /* Build configuration list for PBXNativeTarget "geofencingUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +552,7 @@
 				7ABAB5C71F61F46300C656E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
